@@ -17,7 +17,7 @@ import (
 // Adapted from go-chi's custom logging middleware example, source:
 // https://github.com/go-chi/chi/blob/v5.0.3/_examples/logging/main.go
 
-func NewLogr(log logr.Logger, geodb *geoip2.Reader) func(next http.Handler) http.Handler {
+func NewLogger(log logr.Logger, geodb *geoip2.Reader) func(next http.Handler) http.Handler {
 	return middleware.RequestLogger(&Logger{log: log, geodb: geodb})
 }
 
